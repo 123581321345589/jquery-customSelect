@@ -1,6 +1,7 @@
 # Custom Select 1.0
 
 Кастомный блок выпадающего списка `<select>` с возможностью поиска и гибкой настройкой стилей. По умолчанию выглядит так:
+
 <img src="http://clearex.ru/wp-content/uploads/2017/03/customselect.jpg" alt="">
 
 ## Подключение:
