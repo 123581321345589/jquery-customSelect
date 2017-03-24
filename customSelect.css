@@ -1,0 +1,116 @@
+.select {
+  cursor: pointer;
+  position: relative;
+  opacity: 0;
+}
+.select.opend {
+  z-index: 1;
+}
+.select .header {
+  display: table;
+  width: 100%;
+  height: 35px;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+.select .header .title {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+}
+.select .header .title .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 33px;
+  padding: 0 10px;
+  line-height: 33px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.select .header .title .placeholder {
+  color: #aaa;
+}
+.select .header .title .choice {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 3px 5px;
+  line-height: 1;
+  background: #eee;
+  border-radius: 3px;
+}
+.select .header .title .choice:first-child {
+  margin-left: -5px;
+}
+.select .header .title .choice:hover {
+  background: #e3e3e3;
+}
+.select .header .toggle {
+  display: table-cell;
+  vertical-align: middle;
+  width: 30px;
+  border-left: 1px solid #ddd;
+  text-align: center;
+}
+.select .header .toggle:before {
+  content: '▼';
+  display: inline-block;
+  color: #999;
+  font-size: 12px;
+}
+.select.opend .header .toggle:before {
+  content: '▲';
+}
+.select .header:hover .toggle:before {
+  color: #555;
+}
+.select .body {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: -1px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+.select .body .search {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
+.select .body .search input {
+  outline: none;
+  display: block;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+.select .body .options {
+  max-height: 150px;
+  overflow: auto;
+}
+.select .body .options .option,
+.select .body .options .message {
+  padding: 0 10px;
+  height: 30px;
+  line-height: 30px;
+  box-sizing: border-box;
+}
+.select .body .options .option:hover {
+  background: #f1f1f1;
+}
+.select .body .options .option.selected {
+  background: #bdd8ea;
+}
+.select .body .options .option.selected:hover {
+  background: #c8d7e1;
+}
+.select .body .options .option + .option {
+  border-top: 1px solid #ddd;
+}
+.select .body .options .message {
+  color: #555;
+}
