@@ -20,13 +20,13 @@
 <h2>Функционал:</h2>
 <pre><code>
 jQuery(document).ready(function($) {
-
+  
   // Инициализация
   $('select').customSelect();
-
+  
   // Реинициализация (после изменения пунктов в стандартном селекте)
   $('select').customSelect('reinit');
-
+  
 });
 </code></pre>
 
