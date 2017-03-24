@@ -1,37 +1,41 @@
 # Custom Select 1.0
 
-<p>Кастомный блок выпадающего списка &lt;select&gt; с возможностью поиска и гибкой настройкой стилей. По умолчанию выглядит так:</p>
-<p><img src="http://clearex.ru/wp-content/uploads/2017/03/customselect.jpg" alt=""></p>
+Кастомный блок выпадающего списка `<select>` с возможностью поиска и гибкой настройкой стилей. По умолчанию выглядит так:
+<img src="http://clearex.ru/wp-content/uploads/2017/03/customselect.jpg" alt="">
 
-<h2>Подключение:</h2>
-<pre><code>
-&lt;link rel="stylesheet" href="customSelect.min.css"&gt;
-&lt;script src="http://pre.jquery.com/jquery-3.1.1.min.js"&gt;&lt;/script&gt;
-&lt;script src="jquery.customSelect.min.js"&gt;&lt;/script&gt;
-</code></pre>
+## Подключение:
 
-<h2>HTML:</h2>
-<pre><code>
-&lt;select name="" placeholder="Placeholder" style="display:none" multiple&gt;
+```html
+<link rel="stylesheet" href="customSelect.min.css">
+<script src="http://pre.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="jquery.customSelect.min.js"></script>
+```
+
+## HTML:
+
+```html
+<select name="" placeholder="Placeholder" style="display:none" multiple>
   ...
-&lt;/select&gt;
-</code></pre>
+</select>
+```
 
-<h2>Функционал:</h2>
-<pre><code>
+## Функционал:
+
+```js
 jQuery(document).ready(function($) {
-  
+
   // Инициализация
   $('select').customSelect();
-  
+
   // Реинициализация (после изменения пунктов в стандартном селекте)
   $('select').customSelect('reinit');
-  
-});
-</code></pre>
 
-<h2>Все селекторы стилей:</h2>
-<pre><code>
+});
+```
+
+## Все селекторы стилей:
+
+```css
 .select {}
 .select.opend {}
 .select .header {}
@@ -57,24 +61,25 @@ jQuery(document).ready(function($) {
 .select .body .options .option.selected {}
 .select .body .options .option.selected:hover {}
 .select .body .options .option + .option {}
-</code></pre>
+```
 
-<h2>HTML на выходе:</h2>
-<pre><code>
-&lt;div class="select" style="opacity: 1;"&gt;
-  &lt;div class="header"&gt;
-    &lt;div class="title"&gt;
-      &lt;div class="cover"&gt;
-        &lt;span class="placeholder"&gt;Placeholder&lt;/span&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="toggle"&gt;&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="body"&gt;
-    &lt;div class="options"&gt;
-      &lt;div class="option" data-value="0"&gt;Option 0&lt;/div&gt;
+## HTML на выходе:
+
+```html
+<div class="select" style="opacity: 1;">
+  <div class="header">
+    <div class="title">
+      <div class="cover">
+        <span class="placeholder">Placeholder</span>
+      </div>
+    </div>
+    <div class="toggle"></div>
+  </div>
+  <div class="body">
+    <div class="options">
+      <div class="option" data-value="0">Option 0</div>
       ...
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+    </div>
+  </div>
+</div>
+```
