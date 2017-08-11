@@ -1,4 +1,4 @@
-/* Custom Select v1.0 | (c) real.Master | clearex.ru */
+/* Custom Select v1.0.1 | (c) real.Master | clearex.ru */
 ;(function($) {
 
 	$.fn.customSelect = function(action) {
@@ -101,10 +101,11 @@
 				options.find('.option').on('click', function() {
 
 					var
-					new_item   = $(this),
-					new_title  = new_item.text(),
-					new_value  = new_item.data('value').toString(),
-					is_current = def_select.val().indexOf(new_value) < 0 ? false : true;
+					new_item     = $(this),
+					new_title    = new_item.text(),
+					new_value    = new_item.data('value').toString(),
+					def_selected = def_options.filter('[selected]'),
+					is_current   = (def_selected.length && def_select.val().indexOf(new_value) >= 0) ? true : false;
 
 					// Выделить пункт в дефолтном селекте
 					var def_option = def_select.find('option').filter(function() {
@@ -223,7 +224,6 @@
 				function selected_options() {
 					title.html('');
 					var selected = def_options.filter('[selected]');
-					console.log(selected);
 					if (selected.length) {
 						selected.each(function(i, e) {
 							var item = $(e);
